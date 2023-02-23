@@ -1,0 +1,79 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Untitled Document</title>
+<link href="css/if.css" rel="stylesheet" type="text/css">
+</head>
+
+<body>
+<h1>Some Memorable Movies</h1>
+
+<h3><span class="ital">The Making of Sitcoming #16: A Souvenir, Yah</span> (Renato Umali, 2002)</h3>
+
+<div class="sideBySide">
+<img class="filmStill" onClick="onClick_DTRT_img01()" src="images/sitcomic16_01.jpg" alt="The Making of Sitcoming #16">
+<img class="filmStill" onClick="onClick_DTRT_img02()" src="images/sitcomic16_02.jpg" alt="The Making of Sitcoming #16">
+<img class="filmStill" onClick="onClick_DTRT_img03()" src="images/sitcomic16_03.jpg" alt="The Making of Sitcoming #16">
+</div>
+
+<p class="filmInfo" id="DTRT_text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Qui quas architecto porro fugiat numquam distinctio, nulla quaerat. Cupiditate, nemo, excepturi. Cupiditate aliquam facere deleniti officia, odit minus velit delectus fugiat atque tempora modi fugit debitis consequuntur, veritatis ratione soluta pariatur accusamus, consequatur, totam! Enim dolore aut harum molestiae autem ipsum.</p>
+
+<button type="button" onClick="gotoMovie()" id="gotoMovie_btn">Go to the movie</button>
+
+</body>
+<script>
+
+var gotoMovie_btn = document.getElementById("gotoMovie_btn");
+gotoMovie_btn.style.visibility = "hidden";
+
+var img01_clicked = false;
+var img02_clicked = false;
+var img03_clicked = false;
+
+var DTRT_text = document.getElementById("DTRT_text");
+
+var DTRT00 = "Sitcomics were little photo comics that I used to create and publish in a now defunct arts monthly, The Milwaukee Orbit. Since I got the stills used in the comics by shooting video, it was an easy enough manner to make little videos about making these sitcomics, since they often involved interesting situations and people. As well, the videos were able to reach a different audience than the arts monthly.";
+
+var DTRT01 = "The Making of Sitcomic #16 took place in one of the only public ice arenas in the Milwaukee Parks system: Wilson Park (I think). What I like about these Sitcomics is that they sometimes acted like mini-diaries as they documented a specific time in my life and highlighted activities I used to do. In this case, play hockey."
+
+var DTRT02 = "Sitcominc #16 faetures Austrian artist, Heimo Wallner. He was in Milwaukee for an exhibit in Marquette's Haggerty Museum. But he also liked to play hockey and so went out with a bunch of us. That's ex-film department chair, Steve Wetzel, behind Heimo in this video still."
+
+var DTRT03 = "The premise of the Sitcomic was simply to humorously highlight thd differences between North American hockey and European hockey. In the hockey world, European hockey is known as more of a finesse game while North American hockey is much more rough and tumble. European hockey rinks are wider than rinks in the States, which encourages more passing and position play and rewards speed."
+
+DTRT_text.innerHTML = DTRT00;
+
+function onClick_DTRT_img01(){
+	DTRT_text.innerHTML = DTRT01;
+	img01_clicked = true;
+	console.log("img01_clicked = " + img01_clicked);
+	revealButton();
+}
+
+function onClick_DTRT_img02(){
+	DTRT_text.innerHTML = DTRT02;
+	img02_clicked = true;
+	console.log("img02_clicked = " + img02_clicked);
+	revealButton();
+}
+
+function onClick_DTRT_img03(){
+	DTRT_text.innerHTML = DTRT03;
+	img03_clicked = true;
+	console.log("img03_clicked = " + img03_clicked);
+	revealButton();
+}
+
+function revealButton(){
+	if (img01_clicked && img02_clicked && img03_clicked){
+		console.log("REVEAL BUTTON");
+		gotoMovie_btn.style.visibility = "visible";
+	}
+}
+
+function gotoMovie(){
+	window.open("https://vimeo.com/45768116", "_blank");
+}
+
+</script>
+</html>
