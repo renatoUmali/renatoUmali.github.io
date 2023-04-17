@@ -1,0 +1,61 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Final_Project/index.html</title>
+<link href="css/Final_Project.css" rel="stylesheet" type="text/css">
+</head>
+
+<body>
+<h1>PB AND J</h1>
+<div class="vidCenter">
+<video id="opener_vid" controls="controls" muted="muted" autoplay="autoplay" >
+  <source src="videos/opener .mp4" type="video/mp4">
+</video>
+</div>
+<p id="caption">
+You're hungry and want to make a PB and J sandwich. Choose your first ingredient.
+</p>
+<div>
+<p>
+<button id="choiceOne" onClick="buttonOne()">Grape Jelly</button>
+</p>
+<p>
+<button id="choiceTwo" onClick="buttonTwo()">Mustard</button>
+</p>
+</div>
+
+
+<script>
+document.getElementById('opener_vid').addEventListener('ended', myHandler,false);
+
+	var btn1 = document.getElementById("choiceOne");
+	var btn2 = document.getElementById("choiceTwo");
+	
+	var caption = document.getElementById("caption");
+	
+	caption.style.display = 'none';
+	btn1.style.display = 'none';
+	btn2.style.display = 'none';
+	
+	function myHandler(e){
+	caption.style.display = 'block';
+	btn1.style.display = 'block';
+	btn2.style.display = 'block';
+	
+	}
+
+	function buttonOne(){
+		window.open ('html/jelly.html','_self',false)
+	}
+
+	function buttonTwo(){
+		window.open ('html/Bad_1.html', '_self', false)
+	}
+
+
+
+	</script>
+
+</body>
+</html>

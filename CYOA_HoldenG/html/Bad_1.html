@@ -1,0 +1,53 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Bad_1.html</title>
+<link href="../css/Final_Project.css" rel="stylesheet" type="text/css">
+</head>
+
+<body>
+<div class="vidCenter">
+  <video id="mustard_vid" controls="controls" muted="muted" autoplay="autoplay" >
+    <source src="../videos/wrongOption_1 .mp4" type="video/mp4">
+  </video>
+</div>
+<p id="caption">Seriously? Pick a different ingredient.
+</p>
+<div>
+<p>
+<button id="choiceOne" onClick="buttonOne()">Grape Jelly</button>
+</p>
+<p>
+<button id="choiceTwo" onClick="buttonTwo()">Sour Cream</button>
+</p>
+</div>
+
+<script>
+document.getElementById('bad1_vid').addEventListener('ended',myHandler,false);
+
+	var btn1=document.getElementById("choiceOne");
+	var btn2=document.getElementById("choiceTwo");
+	
+	var caption=document.getElementById("caption");
+	
+	caption.style.display='none';
+	btn1.style.display='none';
+	btn2.style.display='none';
+	
+	function myHandler(e){
+	caption.style.display='block';
+	btn1.style.display='block';
+	btn2.style.display='block';
+	}
+
+	function buttonOne(){
+		window.open('jelly.html', '_self',false)
+	}
+	
+	function buttonTwo(){
+		window.open('Bad_2.html','_self',false)
+	}
+</script>
+</body>
+</html>

@@ -1,0 +1,34 @@
+@charset "UTF-8";
+sponge {
+}
+body h1 {
+    text-align: center;
+}
+#imgCenter img {
+    margin-left: 500px;
+    text-align: justify;
+}
+#opener_vid {
+    width: 500px;
+    height: 500px;
+}
+#mustard_vid {
+    width: 500px;
+    height: 500px;
+}
+#jelly_vid {
+    width: 500px;
+    height: 500px;
+}
+#PB_vid {
+    width: 500px;
+    height: 500px;
+}
+#sourCream_vid {
+    width: 500px;
+    height: 500px;
+}
+#goodEnd_vid {
+    width: 500px;
+    height: 500px;
+}

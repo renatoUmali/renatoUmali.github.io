@@ -1,0 +1,45 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>jelly.html</title>
+<link href="../css/Final_Project.css" rel="stylesheet" type="text/css">
+</head>
+
+<body>
+<div class="vidCenter">
+  <video id="jelly_vid" controls="controls" muted="muted" autoplay="autoplay" >
+    <source src="../videos/jelly .mp4" type="video/mp4">
+  </video>
+</div>
+<p id="caption">
+Great! Now for the other slice.
+</p>
+<div>
+<p>
+<button id="choiceOne" onClick="buttonOne()">Peanut Butter</button>
+</p>
+</div>
+
+<script>
+document.getElementById('jelly_vid').addEventListener('ended',myHandler,false);
+
+	var btn1 = document.getElementById("choiceOne");
+
+	var caption=document.getElementById("caption");
+		caption.style.display='none';
+		btn1.style.display='none';
+		
+		function myHandler(e){
+		caption.style.display='block';
+		btn1.style.display='block';
+		}
+
+		function buttonOne(){
+			window.open('PB.html','_self',false)
+		
+		}
+
+</script>
+</body>
+</html>
