@@ -1,0 +1,60 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>A Clue Appears</title>
+<link href="../css/CYOA_sample.css" rel="stylesheet" type="text/css">
+</head>
+
+<body>
+<h1>Brad and Chad - Problematic Dilemma</h1>
+    <div class="vidCenter">    
+<video id="scene" preload="auto" controls>
+  <source src="../videos/Scene3.m4v" type="video/mp4">
+</video>
+    </div>
+<p id="caption">
+<Strong>Maestro Bootlicker</Strong> is toying with you. He's sending you around the city but now you don't have a ride. Do you use Brad's idea?
+</p>
+<div>
+<p>
+<button id="choiceOneBad" onClick="buttonOne()">Listen to Brad</button>    
+</p>    
+<p>
+<button id="choiceTwoImproving" onClick="buttonTwo()">Give up</button>    
+</p>
+   
+</div>
+
+    <script>
+    document.getElementById('scene').addEventListener('ended',myHandler,false);
+        
+    var btn1 = document.getElementById("choiceOneBad");
+    var btn2 = document.getElementById("choiceTwoImproving"); 
+   
+    var caption = document.getElementById("caption");
+        
+    caption.style.display = 'none';    
+    btn1.style.display = 'none';
+    btn2.style.display = 'none';
+        
+    
+        
+    function myHandler(e) {
+        caption.style.display = 'block';    
+        btn1.style.display = 'block';
+        btn2.style.display = 'block';
+
+    }
+        
+    function buttonOne() {
+        window.open ('scene2_2.html','_self',false)
+    }
+        
+    function buttonTwo() {
+        window.open ('scene1_2.html','_self',false)
+    }    
+    </script>
+    
+</body>
+</html>
