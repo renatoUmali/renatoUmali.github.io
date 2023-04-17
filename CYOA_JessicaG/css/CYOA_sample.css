@@ -1,0 +1,19 @@
+@charset "UTF-8";
+body {
+    background-color: #000000;
+    left: 145px;
+}
+.vidCenter #scene {
+    position: relative;
+    left: 145px;
+    width: 70%;
+    height: auto;
+}
+#choiceOneNeutral {
+    position: relative;
+    left: 145px;
+}
+#choiceTwoNeutral {
+    position: relative;
+    left: 145px;
+}

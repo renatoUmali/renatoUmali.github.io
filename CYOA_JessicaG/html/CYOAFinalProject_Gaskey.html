@@ -1,0 +1,67 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Untitled Document</title>
+<link href="../css/cyoafinalproject_gaskey copy 2.css" rel="stylesheet" type="text/css">
+</head>
+
+<body>
+<h1>Creating Rookery Brewing Company</h1>
+<div id="imageAndButtons">
+<img id="scene" src="../images/opening.jpeg" class="center" width="2726" height="1786" alt=""/>
+<div id="box01" onClick="onClickBox01()"></div>
+<div id="box02" onClick="onClickBox02()"></div>
+<div id="box03" onClick="onClickBox03()"></div>
+
+<p id="choiceOneNeutral">See Beer Making Process
+</p>
+<p id="choiceTwoNeutral">See Tour of Backyard Garden  
+</p>
+<p id="choiceThreeNeutral">See Him Draw
+</p>
+</div>
+
+<script>
+
+function onClickBox01(){
+	console.log("box01 is clicked");
+	window.open ('scene1_1.html','_self',false)
+}
+
+function onClickBox02(){
+	console.log("box02 is clicked");
+	window.open ('scene1_2.html','_self',false)	
+}
+
+function onClickBox03(){
+	console.log("box03 is clicked");
+	window.open ('scene1_3.html','_self',false)
+}
+
+document.getElementById('scene').addEventListener('ended',myHandler,false);
+        
+    var btn1 = document.getElementById("choiceOneNeutral");
+    var btn2 = document.getElementById("choiceTwoNeutral"); 
+	var btn3 = document.getElementById("choiceThreeNeutral"); 
+   
+    var caption = document.getElementById("caption");    
+
+    caption.style.display = 'none';    
+    btn1.style.display = 'none';
+    btn2.style.display = 'none';  
+	btn3.style.display = 'none';
+    
+        
+    function myHandler(e) {
+        caption.style.display = 'block';    
+        btn1.style.display = 'block';
+        btn2.style.display = 'block';
+		btn3.style.display = 'block';
+    }
+        
+
+</script>
+
+</body>
+</html>
