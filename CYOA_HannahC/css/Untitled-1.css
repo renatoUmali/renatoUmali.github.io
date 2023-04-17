@@ -1,0 +1,14 @@
+@charset "utf-8";
+.center {
+    width: 50%;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+#startButton {
+    max-width: 100px;
+}
+
+
+#openingScreen #openingImage {
+}

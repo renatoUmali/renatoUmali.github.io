@@ -1,0 +1,61 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>Scene 1-2</title>
+<link href="../css/CYOA_sample.css" rel="stylesheet" type="text/css">
+</head>
+
+<body>
+<h1>THE MESSAGE - SCENE 1-2</h1>    
+    <div class="vidCenter">    
+<video width="800" height="680" id="scene" preload="auto" controls>
+  <source src="../videos/Creepyroom.m4v" type="video/mp4">
+</video>
+    </div>
+<p id="caption">
+You find yourself walking into a creepy storage room. As you look around, you find a weird detailed map of the city you live in, with the location of your house circled. As you stare at the map, you feel somebody behind you..
+
+</p>
+<div>
+<p>
+<button id="choiceOneNeutral" onClick="buttonOne()">Look behind you</button>    
+</p>    
+<p>
+<button id="choiceTwoImproving" onClick="buttonTwo()">Slowly move out of the room</button>    
+</p>
+   
+</div>
+
+    <script>
+    document.getElementById('scene').addEventListener('ended',myHandler,false);
+        
+    var btn1 = document.getElementById("choiceOneNeutral");
+    var btn2 = document.getElementById("choiceTwoImproving"); 
+   
+    var caption = document.getElementById("caption");
+        
+    caption.style.display = 'none';    
+    btn1.style.display = 'none';
+    btn2.style.display = 'none';
+        
+    
+        
+    function myHandler(e) {
+        caption.style.display = 'block';    
+        btn1.style.display = 'block';
+        btn2.style.display = 'block';
+
+    }
+        
+    function buttonOne() {
+        window.open ('scene4_3.html','_self',false)
+    }
+        
+    function buttonTwo() {
+        window.open ('scene2_2.html','_self',false)
+    }    
+    </script>
+    
+</body>
+</html>

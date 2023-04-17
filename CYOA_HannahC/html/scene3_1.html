@@ -1,0 +1,57 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>Scene 3-1</title>
+<link href="../css/CYOA_sample.css" rel="stylesheet" type="text/css">
+</head>
+
+<body>
+<h1>Where am I- scene 3-1</h1>
+    <div class="vidCenter">    
+    <img src="../images/passwordenter.jpg" width="600" height="600" alt=""/> </div>
+<p id="caption">
+You keep moving and reach a computer screen that has a password. You only know two things to type in-"
+</p>
+<div>
+<p>
+<button id="choiceOneBad" onClick="buttonOne()">Type-DONT GO FURTHER</button>    
+</p>    
+<p>
+<button id="choiceTwoImproving" onClick="buttonTwo()">Type- DONT GO IN</button>    
+</p>
+   
+</div>
+
+    <script>
+    document.getElementById('scene').addEventListener('ended',myHandler,false);
+        
+    var btn1 = document.getElementById("choiceOneBad");
+    var btn2 = document.getElementById("choiceTwoImproving"); 
+   
+    var caption = document.getElementById("caption");
+        
+    caption.style.display = 'none';    
+    btn1.style.display = 'none';
+    btn2.style.display = 'none';
+        
+    
+        
+    function myHandler(e) {
+        caption.style.display = 'block';    
+        btn1.style.display = 'block';
+        btn2.style.display = 'block';
+
+    }
+        
+    function buttonOne() {
+        window.open ('scene4_1.html','_self',false)
+    }
+        
+    function buttonTwo() {
+        window.open ('scene3_2.html','_self',false)
+    }    
+    </script>
+    
+</body>
+</html>

@@ -1,0 +1,58 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>Scene 4-2</title>
+<link href="../css/CYOA_sample.css" rel="stylesheet" type="text/css">
+</head>
+
+<body>
+<h1>Where am I - Early Ending</h1>
+    <div class="vidCenter">    
+<video width="800" height="680" id="scene" preload="auto" controls>
+  <source src="../videos/Urthewatcher.m4v" type="video/mp4">
+</video>
+    </div>
+<p id="caption">
+The note said‘Don't go further. Don't go in.’ As you search the bookshelf, you start to feel like you arent being watched anymore. You continue to search and accidentally push one of the books to the floor. As you peak through the shelf, you can see another kid deciding if they want to keep going, or search the bookshelf. You have either become what was watching you, or this is everyone's fate.
+
+</p>
+<div>
+<p>
+<button id="choiceOne" onClick="buttonOne()">Play Again?</button>    
+</p>    
+<p>
+<button id="choiceTwo" onClick="buttonTwo()">Quit</button>    
+</p>
+   
+</div>
+
+    <script>
+    document.getElementById('scene').addEventListener('ended',myHandler,false);
+        
+    var btn1 = document.getElementById("choiceOne");
+    var btn2 = document.getElementById("choiceTwo"); 
+   
+    var caption = document.getElementById("caption");
+        
+    caption.style.display = 'none';    
+    btn1.style.display = 'none';
+    btn2.style.display = 'none';
+        
+    
+        
+    function myHandler(e) {
+       window.open ('goodEnd.html','_self',false)
+    }
+	
+		 function buttonOne() {
+        window.open ('../index.html','_self',false)
+    }
+        
+    function buttonTwo() {
+        window.open('https://www.google.com/','_self',false).close();
+    }    
+    </script>
+    
+</body>
+</html>
