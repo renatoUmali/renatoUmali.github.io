@@ -1,0 +1,58 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>Survive the Night</title>
+<link href="css/CYOA_sample.css" rel="stylesheet" type="text/css">
+</head>
+
+<body>
+<h1>SURVIVE THE NIGHT - OPENING</h1>
+<div class = "vidCenter">    
+<video id="scene" preload="auto" controls>
+  <source src="videos/opening.mp4" type="video/mp4">
+</video>
+</div>
+<p id="caption">
+You're home alone cooking dinner. You hear a text notification, even though you did not expect anyone to text you. Do you answer it...or ignore it? 
+</p>
+<div>
+<p>    
+<button id="choiceOneNeutral" onClick="buttonOne()">Check the text message, maybe it is an emergency</button>
+</p>
+<p>
+<button id="choiceTwoNeutral" onClick="buttonTwo()">Check it later, I'm too hungry and I want to finish making dinner</button>   
+</p>    
+</div>
+
+    <script>
+    document.getElementById('scene').addEventListener('ended',myHandler,false);
+        
+    var btn1 = document.getElementById("choiceOneNeutral");
+    var btn2 = document.getElementById("choiceTwoNeutral"); 
+   
+    var caption = document.getElementById("caption");    
+
+    caption.style.display = 'none';    
+    btn1.style.display = 'none';
+    btn2.style.display = 'none';        
+    
+        
+    function myHandler(e) {
+        caption.style.display = 'block';    
+        btn1.style.display = 'block';
+        btn2.style.display = 'block';
+    }
+        
+    function buttonOne() {
+        window.open ('html/scene1_1.html','_self',false)
+    }
+        
+    function buttonTwo() {
+        window.open ('html/scene1_2.html','_self',false)
+    }    
+        
+    </script>
+    
+</body>
+</html>

@@ -1,0 +1,56 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>Scene 4-1</title>
+<link href="../css/CYOA_sample.css" rel="stylesheet" type="text/css">
+</head>
+
+<body>
+<h1>SURVIVE THE NIGHT - BAD ENDING 2</h1>
+    <div class="vidCenter">    
+<video id="scene" preload="auto" controls>
+  <source src="../videos/badEnding2.mp4" type="video/mp4">
+</video>
+    </div>
+<p id="caption">
+Oh no! Well...you tried your best. You can always try again and SURVIVE THE NIGHT
+</p>
+<div>
+<p>
+<button id="choiceOne" onClick="buttonOne()">Try again</button>    
+</p>       
+</div>
+
+    <script>
+    document.getElementById('scene').addEventListener('ended',myHandler,false);
+        
+    var btn1 = document.getElementById("choiceOne");
+    var btn2 = document.getElementById("choiceTwo"); 
+   
+    var caption = document.getElementById("caption");
+        
+    caption.style.display = 'none';    
+    btn1.style.display = 'none';
+    btn2.style.display = 'none';
+        
+    
+        
+	 function myHandler(e) {
+        caption.style.display = 'block';    
+        btn1.style.display = 'block';
+        btn2.style.display = 'block';
+
+    }
+	
+    function buttonOne() {
+       window.open ('../index.html','_self',false)
+    }
+	
+	function buttonTwo() {
+        window.open ('scene3_1.html','_self',false)
+    }   
+    </script>
+    
+</body>
+</html>

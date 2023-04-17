@@ -1,0 +1,60 @@
+@charset "utf-8";
+h1 {
+    text-align: center;
+    text-decoration: underline;
+}
+.vidCenter {
+    height: auto;
+    margin: 0 auto;
+    display: block;
+}
+#scene {
+    width: auto;
+    max-width: 100%;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+.vidCenter img {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+#choiceOneNeutral:hover {
+    color: orange;
+}
+#choiceTwoNeutral:hover {
+    color: orange;
+}
+#choiceOneGood:hover {
+    color: green;
+}
+#choiceTwoGood:hover {
+    color: green;
+}
+#choiceOneBad:hover {
+    color: red;
+}
+#choiceTwoBad:hover {
+    color: red;
+}
+#choiceOneImproving:hover {
+    color: greenyellow;
+}
+#choiceTwoImproving:hover {
+    color: greenyellow;
+}
+.clueNegative {
+    color: orange;
+}
+.cluePositive {
+    color: greenyellow;
+}
+#caption {
+    font-family: Consolas, "Andale Mono", "Lucida Console", "Lucida Sans Typewriter", Monaco, "Courier New", monospace;
+    font-weight: bold;
+}
+body h1 {
+    font-family: Consolas, "Andale Mono", "Lucida Console", "Lucida Sans Typewriter", Monaco, "Courier New", monospace;
+    font-weight: bold;
+}

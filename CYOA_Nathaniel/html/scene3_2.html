@@ -1,0 +1,57 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>Scene 3-2</title>
+<link href="../css/CYOA_sample.css" rel="stylesheet" type="text/css">
+</head>
+
+<body>
+<h1>SURVIVE THE NIGHT - GOOD ENDING 2</h1>
+    <div class="vidCenter">    
+<video id="scene" preload="auto" controls>
+  <source src="../videos/goodEnding2.mp4" type="video/mp4">
+</video>
+    </div>
+<p id="caption">
+It looks like the police arriving scared the stalker off. Congratulations! You SURVIVED THE NIGHT! 
+</p>
+<div>
+<p>    
+<button id="choiceOneGood" onClick="buttonOne()">Start from Beginning</button>
+</p>
+   
+</div>
+
+    <script>
+    document.getElementById('scene').addEventListener('ended',myHandler,false);
+        
+    var btn1 = document.getElementById("choiceOneGood");
+    var btn2 = document.getElementById("choiceTwoBad"); 
+   
+    var caption = document.getElementById("caption");
+        
+    caption.style.display = 'none';    
+    btn1.style.display = 'none';
+    btn2.style.display = 'none';
+        
+    
+        
+    function myHandler(e) {
+        caption.style.display = 'block';    
+        btn1.style.display = 'block';
+        btn2.style.display = 'block';
+
+    }
+        
+    function buttonOne() {
+        window.open ('../index.html','_self',false)
+    }
+        
+    function buttonTwo() {
+        window.open ('scene4_3.html','_self',false)
+    }    
+    </script>
+    
+</body>
+</html>

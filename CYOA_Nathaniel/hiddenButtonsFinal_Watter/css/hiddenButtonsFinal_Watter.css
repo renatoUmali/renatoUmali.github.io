@@ -1,0 +1,21 @@
+@charset "UTF-8";
+#mainImage {
+    width: 900px;
+    height: auto;
+}
+#box01 {
+    width: 56px;
+    height: 84px;
+    background-color: #F90004;
+    position: absolute;
+    top: 236px;
+    left: 461px;
+    opacity: 0;
+}
+#imageAndButtons {
+    position: relative;
+}
+#introText {
+    font-family: Consolas, "Andale Mono", "Lucida Console", "Lucida Sans Typewriter", Monaco, "Courier New", monospace;
+    font-weight: bold;
+}

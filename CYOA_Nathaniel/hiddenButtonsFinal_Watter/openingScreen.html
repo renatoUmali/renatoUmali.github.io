@@ -1,0 +1,27 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Untitled Document</title>
+<link href="css/hiddenButtonsFinal_Watter.css" rel="stylesheet" type="text/css">
+</head>
+
+<body>
+
+<div id="imageAndButtons">
+<img id="mainImage" src="images/startingScreen.jpg" width="1100" height="688" alt=""/>
+<p id="introText">Click on the front door to enter and continue, as you try to...SURVIVE THE NIGHT<br/>WARNING: Loud audio and sudden jumpscares</p>
+<div id="box01" onClick="onClickBox01()"></div>
+</div>
+</body>
+
+<script>
+
+function onClickBox01 () {
+	console.log ("box01 is clicked");
+	window.open ('../index.html','_self',false);
+}
+
+
+</script>
+</html>
